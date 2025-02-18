@@ -1,0 +1,49 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.base-input {
+  width: 95%;
+  padding: 0.5rem;
+  height: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+.base-select {
+  width: 100%;
+  padding: 0.5rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+.base-select:focus {
+  outline: none;
+  border: 1px solid #ba1b1b;
+}
+
+.base-input:focus {
+  outline: none;
+  border: 1px solid #ba1b1b;
+}
+
+.submit-input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  height: 2rem;
+  cursor: pointer;
+  background-color: #ba1b1b;
+}
