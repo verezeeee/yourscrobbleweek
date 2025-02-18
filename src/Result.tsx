@@ -1,8 +1,6 @@
-import React from 'react'
 import { useLastFm } from './contexts/LastFmContext'
 import "./Result.css"
 import { useNavigate } from 'react-router';
-import html2canvas from 'html2canvas';
 
 interface AlbumProps {
     imageUrl: string;
@@ -15,17 +13,6 @@ const Result = () => {
     const { data, form } = useLastFm();
     const navigate = useNavigate();
 
-    const handleShare = () => {
-        //implement share functionality where when clicked the page will download an image with the grid of albums
-        //use html2canvas or something like that
-        const canvas = html2canvas(document.body);
-        canvas.then((canvas: any) => {
-            const link = document.createElement('a');
-            link.download = 'your-scrobble-week.png';
-            link.href = canvas.toDataURL('image/png');
-            link.click();
-        })
-    }
 
     const getItems = () => {
         if (!data) return [];
@@ -42,7 +29,7 @@ const Result = () => {
         }
     }
 
-    const AlbumCover = ({ imageUrl, size, artist, title }: AlbumProps) => {
+    const AlbumCover = ({ imageUrl, size, title }: AlbumProps) => {
         return (
             <img src={imageUrl} alt={title} width={size} height={size} />
         )
