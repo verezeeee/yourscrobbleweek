@@ -23,6 +23,7 @@ A web application that generates beautiful grid layouts of your Last.fm listenin
 - Vite
 - React Router DOM
 - CSS Grid for responsive layouts
+- Bun 
 
 ### APIs
 - Last.fm API for music data
@@ -37,14 +38,14 @@ git clone https://github.com/verezeeee/yourscrobbleweek.git
 2. Install dependencies
 ```bash
 cd yourscrobbleweek
-npm install
+bun install
 ```
 
 3. Change the API_KEY variable with your Last.fm API key
 
 4. Start the development server
 ```bash
-npm run dev
+bun run dev
 ```
 
 ## Usage
